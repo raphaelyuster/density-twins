@@ -108,7 +108,7 @@ void maxHomog(int n, int r, int edge) {
 
 // check if there is a current loop homomorphism from graph[r1] on n1 vertices to graph[r2], both on n vertices
 bool checkLoopVecHom(int n, int r1, int r2) {
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n; i++)
 		for (int j = i + 1; j < n; j++) {
 			if (homomorph[i] != homomorph[j] && graph[r1][i][j] != graph[r2][homomorph[i]][homomorph[j]])
 				return false;
